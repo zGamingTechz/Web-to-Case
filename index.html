@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+<title>Hotel Management - Register Complaint</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4ca1af;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76,161,175,0.4);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #4ca1af;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #357f8f;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Register your complaint</h1>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Dfj00000INTzr" method="POST">
+
+<input type=hidden name="orgid" value="00Dfj00000INTzr">
+<input type=hidden name="retURL" value="http://salesforce.com">
+
+<label for="email">Email</label>
+<input id="email" maxlength="80" name="email" size="20" type="text" />
+
+<label for="subject">Subject</label>
+<input id="subject" maxlength="80" name="subject" size="20" type="text" />
+
+<label for="description">Description</label>
+<textarea name="description"></textarea>
+
+<input type="submit" name="submit">
+
+</form>
+</div>
+
+</body>
+</html>
